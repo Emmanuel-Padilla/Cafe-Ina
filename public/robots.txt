@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cafeina-ajijic.example.com/sitemap.xml

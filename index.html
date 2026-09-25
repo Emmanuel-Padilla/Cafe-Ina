@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K9G3YNX38E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K9G3YNX38E');
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#46522E" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="canonical" href="https://cafeina-ajijic.example.com/" />
+
+    <title>Café/ina — Café de especialidad en Ajijic, Jalisco</title>
+    <meta
+      name="description"
+      content="Café/ina: café de especialidad, matcha y repostería en Ajijic, Jalisco. Un espacio cálido y pet friendly para tu pausa favorita."
+    />
+    <meta
+      name="keywords"
+      content="cafetería Ajijic, café cerca de mí, coffee shop Ajijic, café de especialidad Jalisco, matcha Ajijic, cafetería local Chapala"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Café/ina" />
+    <meta property="og:title" content="Café/ina — Café de especialidad en Ajijic, Jalisco" />
+    <meta
+      property="og:description"
+      content="Café de especialidad, matcha y repostería en un espacio cálido y pet friendly en Ajijic, Jalisco."
+    />
+    <meta property="og:image" content="https://cafeina-ajijic.example.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="es_MX" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Café/ina — Café de especialidad en Ajijic, Jalisco" />
+    <meta
+      name="twitter:description"
+      content="Café de especialidad, matcha y repostería en un espacio cálido y pet friendly en Ajijic, Jalisco."
+    />
+    <meta name="twitter:image" content="https://cafeina-ajijic.example.com/og-image.jpg" />
+
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("cafeina-theme");
+          var theme =
+            stored === "light" || stored === "dark"
+              ? stored
+              : window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light";
+          if (theme === "dark") {
+            document.documentElement.classList.add("dark");
+          }
+          document.documentElement.style.colorScheme = theme;
+        } catch (e) {}
+      })();
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CafeOrCoffeeShop",
+        "name": "Café/ina",
+        "image": "https://cafeina-ajijic.example.com/og-image.jpg",
+        "servesCuisine": "Coffee, Matcha, Pastries",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Calle Constitución #71",
+          "addressLocality": "Ajijic",
+          "addressRegion": "Jalisco",
+          "postalCode": "45920",
+          "addressCountry": "MX"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "07:00",
+            "closes": "21:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Sunday"],
+            "opens": "08:00",
+            "closes": "17:00"
+          }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61587115746046",
+          "https://www.instagram.com/cafeina.coffe"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

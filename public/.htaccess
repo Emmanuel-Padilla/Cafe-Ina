@@ -1,0 +1,14 @@
+# React Router on Apache / LiteSpeed (Hostinger).
+DirectoryIndex index.html
+RewriteEngine On
+
+# Resolve page routes even if an old deployment left a panaderia directory.
+RewriteRule ^(menu|panaderia)/?$ index.html [L]
+
+# Serve real files and directories normally (images, scripts, styles, etc.).
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Let React Router handle other routes, including the site's not-found page.
+RewriteRule ^ index.html [L]

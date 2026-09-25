@@ -1,0 +1,317 @@
+@import "tailwindcss";
+@import "@fontsource-variable/fraunces";
+@import "@fontsource-variable/fraunces/wght-italic.css";
+@import "@fontsource/work-sans/400.css";
+@import "@fontsource/work-sans/500.css";
+@import "@fontsource/work-sans/600.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------------------------------------------------------------------- *
+ * Café/ina brand tokens
+ * Raw palette taken directly from the logo/brand brief. Semantic tokens
+ * below map these onto light/dark modes — dark mode is a deliberately
+ * re-tuned palette (forest green + charcoal + cream + desaturated sage),
+ * not an automatic inversion of the light palette.
+ * ---------------------------------------------------------------------- */
+:root {
+  /* raw brand colors */
+  --brand-olive: #5f6f3f;
+  --brand-moss: #46522e;
+  --brand-ivory: #f4efd9;
+  --brand-beige: #ddd2b5;
+  --brand-ink: #111111;
+  --brand-coffee: #6a4a35;
+
+  /* dark-mode tuned brand colors */
+  --brand-forest: #171f14;
+  --brand-charcoal: #1d241a;
+  --brand-cream: #f1e9d8;
+  --brand-cream-muted: #cbc2a6;
+  --brand-sage: #93a479;
+  --brand-olive-lifted: #7f9556;
+  --brand-coffee-lifted: #b28863;
+
+  /* semantic tokens — light mode (default) */
+  --bg: var(--brand-ivory);
+  --surface: #ffffff;
+  --surface-muted: var(--brand-beige);
+  --text: var(--brand-ink);
+  --text-muted: #55524a;
+  --nav-bg: rgba(244, 239, 217, 0.82);
+  --nav-bg-scrolled: rgba(70, 82, 46, 0.94);
+  --nav-text: var(--brand-ink);
+  --nav-text-scrolled: var(--brand-ivory);
+  --primary: var(--brand-olive);
+  --primary-hover: var(--brand-moss);
+  --primary-foreground: var(--brand-ivory);
+  --accent: var(--brand-coffee);
+  --glass-bg: rgba(255, 255, 255, 0.52);
+  --glass-bg-strong: rgba(255, 255, 255, 0.72);
+  --glass-stroke: rgba(255, 255, 255, 0.35);
+  --shadow-soft: 0 24px 60px rgba(17, 17, 17, 0.08);
+  --shadow-strong: 0 36px 90px rgba(17, 17, 17, 0.16);
+  --footer-bg: var(--brand-moss);
+  --footer-text: var(--brand-ivory);
+  --border: rgba(17, 17, 17, 0.1);
+  --grout: rgba(244, 239, 217, 0.55);
+  --ring: var(--brand-coffee);
+
+  color-scheme: light;
+}
+
+.dark {
+  --bg: var(--brand-forest);
+  --surface: var(--brand-charcoal);
+  --surface-muted: #26301f;
+  --text: var(--brand-cream);
+  --text-muted: var(--brand-cream-muted);
+  --nav-bg: rgba(23, 31, 20, 0.78);
+  --nav-bg-scrolled: rgba(23, 31, 20, 0.95);
+  --nav-text: var(--brand-cream);
+  --nav-text-scrolled: var(--brand-cream);
+  --primary: var(--brand-olive-lifted);
+  --primary-hover: var(--brand-sage);
+  --primary-foreground: var(--brand-forest);
+  --accent: var(--brand-coffee-lifted);
+  --glass-bg: rgba(23, 31, 20, 0.48);
+  --glass-bg-strong: rgba(29, 36, 26, 0.72);
+  --glass-stroke: rgba(241, 233, 216, 0.12);
+  --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.22);
+  --shadow-strong: 0 36px 90px rgba(0, 0, 0, 0.34);
+  --footer-bg: #12160f;
+  --footer-text: var(--brand-cream);
+  --border: rgba(241, 233, 216, 0.12);
+  --grout: rgba(241, 233, 216, 0.08);
+  --ring: var(--brand-sage);
+
+  color-scheme: dark;
+}
+
+@theme {
+  --font-display: "Fraunces Variable", "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-nav: var(--nav-bg);
+  --color-nav-scrolled: var(--nav-bg-scrolled);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-footer: var(--footer-bg);
+  --color-footer-text: var(--footer-text);
+  --color-border: var(--border);
+  --color-grout: var(--grout);
+  --color-ring: var(--ring);
+
+  --color-olive: var(--brand-olive);
+  --color-moss: var(--brand-moss);
+  --color-ivory: var(--brand-ivory);
+  --color-beige: var(--brand-beige);
+  --color-ink: var(--brand-ink);
+  --color-coffee: var(--brand-coffee);
+  --color-sage: var(--brand-sage);
+  --color-cream: var(--brand-cream);
+
+  --animate-rise: rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade-in: fade-in 0.6s ease-out both;
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    background-image:
+      radial-gradient(circle at top left, rgba(106, 74, 53, 0.12), transparent 28%),
+      radial-gradient(circle at top right, rgba(95, 111, 63, 0.1), transparent 24%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.18), transparent 22%);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-ivory);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  /* Mosaic/brick texture — subtle offset-block motif echoing the logo's
+     herringbone tile pattern. Used sparingly as a section backdrop, never
+     as the primary content layer. */
+  .pattern-mosaic {
+    background-image:
+      repeating-linear-gradient(
+        90deg,
+        var(--color-grout) 0px,
+        var(--color-grout) 2px,
+        transparent 2px,
+        transparent 64px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        var(--color-grout) 0px,
+        var(--color-grout) 2px,
+        transparent 2px,
+        transparent 32px
+      );
+    background-position: 0 0, 32px 32px;
+  }
+
+  .glass-panel {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-stroke);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .glass-panel-strong {
+    background: var(--glass-bg-strong);
+    border: 1px solid var(--glass-stroke);
+    box-shadow: var(--shadow-strong);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-strong {
+    box-shadow: var(--shadow-strong);
+  }
+
+  .bg-dot-grid {
+    background-image:
+      radial-gradient(circle at center, currentColor 1.2px, transparent 1.2px);
+    background-size: 22px 22px;
+  }
+
+  .bg-grain-gradient {
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(244, 239, 217, 0.24), transparent 24%),
+      radial-gradient(circle at 80% 10%, rgba(106, 74, 53, 0.2), transparent 30%),
+      radial-gradient(circle at 50% 100%, rgba(95, 111, 63, 0.3), transparent 36%),
+      linear-gradient(135deg, rgba(17, 17, 17, 0.08), transparent 40%);
+  }
+
+  .noise-overlay {
+    position: relative;
+  }
+
+  .noise-overlay::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    opacity: 0.12;
+    mix-blend-mode: soft-light;
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.22) 0.6px, transparent 0.8px),
+      radial-gradient(circle at 80% 30%, rgba(0, 0, 0, 0.18) 0.7px, transparent 0.9px),
+      radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.18) 0.6px, transparent 0.8px);
+    background-size: 14px 14px, 18px 18px, 22px 22px;
+    pointer-events: none;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Backhaus has its own palette only within its dedicated page. */
+.bakery-theme {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+  --bg: #fff7ec;
+  --surface: #fffcf6;
+  --surface-muted: #f3e5d3;
+  --text: #39251c;
+  --text-muted: #735849;
+  --primary: #a8401e;
+  --primary-hover: #843116;
+  --primary-foreground: #fff8ec;
+  --accent: #c45b30;
+  --border: #e9d5bf;
+}
+
+.dark .bakery-theme {
+  --bg: #211912;
+  --surface: #2c2119;
+  --surface-muted: #3c2d22;
+  --text: #fff3e2;
+  --text-muted: #d5bba4;
+  --primary: #f2a477;
+  --primary-hover: #ffc099;
+  --primary-foreground: #28190f;
+  --accent: #f2a477;
+  --border: #594333;
+}
