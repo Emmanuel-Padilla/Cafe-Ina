@@ -167,16 +167,19 @@ const es = {
         "Visítanos"
     ],
     "productsEyebrow": "De nuestra vitrina",
+    "selectionTitle": "Conoce nuestros panes",
+    "morePastriesTitle": "Más de nuestra panadería",
+    "assortmentTitle": "Selección de pan dulce",
     "productsTitle": "Un pan para cada antojo.",
     "productsBody": "Un vistazo a las piezas que preparamos en Backhaus. Consulta la selección y disponibilidad del día con la panadería.",
     "products": [
         {
-            "title": "Croissants",
+            "title": "Medialunas",
             "description": "Capas doradas y el sabor de la mantequilla. Un clásico para tu pausa de café."
         },
         {
-            "title": "Roles",
-            "description": "Espirales de pan dulce con un acabado cremoso, listas para acompañar tu día."
+            "title": "Rol de canela",
+            "description": "Rol de canela con glaseado, cubierto con almendra o nuez."
         },
         {
             "title": "Piezas con fruta",
@@ -207,7 +210,7 @@ const es = {
     "galleryTitle": "Entre charolas, pan y buenos momentos.",
     "galleryBody": "Recorre nuestro espacio y la preparación del pan. Toca una imagen para verla más grande.",
     "galleryCaptions": [
-        "Croissants recién horneados",
+        "Medialunas recién horneadas",
         "El pan antes de entrar al horno",
         "Los últimos detalles",
         "El acabado de los croissants",
@@ -218,7 +221,7 @@ const es = {
         "Roles y su cobertura"
     ],
     "galleryAlts": [
-        "Croissants dorados de Backhaus en una charola",
+        "Medialunas doradas de Backhaus en una charola",
         "Piezas de pan en preparación sobre bandejas de Backhaus",
         "Acabado de pan dulce en una charola",
         "Una mano pincelando croissants horneados",
@@ -246,7 +249,7 @@ const es = {
     body: "Pan recién horneado cada día, preparado con mantequilla y el cuidado de un oficio artesanal. Un antojo para llevar o para acompañar tu próxima pausa de café.",
     labels: ["Panadería artesanal", "Horneado diario", "Hecho con mantequilla"],
     photoCaption: "Del horno a tu próxima pausa.",
-    photoAlt: "Croissants dorados de Backhaus bakehouse recién horneados",
+    photoAlt: "Medialunas doradas de Backhaus bakehouse recién horneadas",
     detailAlt: "Bandejas con distintas piezas de pan de Backhaus en preparación",
     logoAlt: "Logo de Backhaus bakehouse: croissant dibujado sobre fondo naranja",
     visitLabel: "Visita Backhaus",
