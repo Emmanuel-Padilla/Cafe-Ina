@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 import { bakery } from "../data/bakery";
+import { site } from "../data/site";
 
 export function useDocumentMeta() {
   const { t } = useLanguage();
@@ -12,11 +13,17 @@ export function useDocumentMeta() {
     const title = isBakery ? t.bakeryPage.metaTitle : pathname === "/menu" ? t.meta.menuTitle : t.meta.title;
     const description =
       isBakery ? t.bakeryPage.metaDescription : pathname === "/menu" ? t.meta.menuDescription : t.meta.description;
+    const keywords = isBakery
+      ? t.meta.bakeryKeywords
+      : pathname === "/menu" ? t.meta.menuKeywords : t.meta.keywords;
 
     document.title = title;
 
     const descriptionMeta = document.querySelector('meta[name="description"]');
     if (descriptionMeta) descriptionMeta.setAttribute("content", description);
+
+    const keywordsMeta = document.querySelector('meta[name="keywords"]');
+    if (keywordsMeta) keywordsMeta.setAttribute("content", keywords);
 
     const ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle) ogTitle.setAttribute("content", title);
@@ -36,20 +43,18 @@ export function useDocumentMeta() {
       twitterDescription.setAttribute("content", description);
 
     const canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
-    if (canonical) {
-      const url = new URL(canonical.href);
-      url.pathname = pathname;
-      url.hash = "";
-      url.search = "";
-      canonical.href = url.href;
-    }
+    const pageUrl = new URL(pathname, site.url).href;
+    if (canonical) canonical.href = pageUrl;
+
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute("content", pageUrl);
 
     const schema = document.querySelector('script[type="application/ld+json"]');
     const originalSchema = schema?.textContent;
     const socialImages = [...document.querySelectorAll<HTMLMetaElement>('meta[property="og:image"], meta[name="twitter:image"]')];
     const originalSocialImages = socialImages.map((image) => image.content);
     if (isBakery) {
-      const imageUrl = new URL(bakery.photos.croissants, canonical?.href ?? window.location.origin).href;
+      const imageUrl = new URL(bakery.photos.croissants, site.url).href;
       socialImages.forEach((image) => { image.content = imageUrl; });
     }
     if (isBakery && schema) {
@@ -57,8 +62,8 @@ export function useDocumentMeta() {
         "@context": "https://schema.org",
         "@type": "Bakery",
         name: `${bakery.name} ${bakery.descriptor}`,
-        url: canonical?.href,
-        image: new URL(bakery.photos.croissants, canonical?.href ?? window.location.origin).href,
+        url: pageUrl,
+        image: new URL(bakery.photos.croissants, site.url).href,
         email: bakery.email,
         address: {
           "@type": "PostalAddress",

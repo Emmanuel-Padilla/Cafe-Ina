@@ -83,7 +83,9 @@ La carpeta antigua `panaderia/` puede retirarse después de verificar la publica
 
 ## Dominio
 
-`index.html`, `public/robots.txt` y `public/sitemap.xml` usan el dominio de marcador de posición `https://cafeina-ajijic.example.com/`. Reemplázalo por el dominio real antes de publicar (canonical, Open Graph, Twitter Cards, sitemap).
+El dominio oficial es `https://cafe-ina.com.mx/`, configurado en `src/data/site.ts`, `index.html`, `public/robots.txt` y `public/sitemap.xml`. Los enlaces canonical, Open Graph, Twitter Cards y datos estructurados usan este dominio.
+
+El sitemap incluye las tres páginas públicas: `/`, `/menu` y `/panaderia`. Se copia al build como `dist/sitemap.xml` y se anuncia en `robots.txt`. No declara rutas alternativas por idioma porque español e inglés se muestran en la misma URL mediante el selector de idioma. Al publicar, comprueba que `https://cafe-ina.com.mx/sitemap.xml` sirva el XML.
 
 ## Mapa
 

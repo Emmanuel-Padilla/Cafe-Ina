@@ -44,17 +44,10 @@ export function TiktokIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      fill="currentColor"
       {...props}
     >
-      <path d="M14 4c.6 1.8 2 3.2 4 4" />
-      <path d="M10 10.5v6.25a3.25 3.25 0 1 1-3.25-3.25" />
-      <path d="M14 4v10.25a3.75 3.75 0 1 1-3.75-3.75" />
-      <path d="M14 8.5c1.4 1 2.8 1.5 4 1.5" />
+      <path d="M14 3h3a5 5 0 0 0 5 5v3a8 8 0 0 1-5-1.75V16a6 6 0 1 1-6-6v3a3 3 0 1 0 3 3Z" />
     </svg>
   );
 }

@@ -4,10 +4,16 @@ const en: typeof es = {
   meta: {
     title: "Café/ina — Specialty Coffee in Ajijic, Jalisco",
     description:
-      "Café/ina: specialty coffee, matcha and pastries in Ajijic, Jalisco. A warm, pet-friendly spot for your favorite break.",
+      "Café/ina in Ajijic, Jalisco: specialty coffee, matcha, smoothies, frappes and pastries. Visit our pet-friendly coffee shop at Constitución 71.",
+    keywords:
+      "Café/ina Ajijic, Cafeina Ajijic, coffee shop Ajijic, specialty coffee Ajijic, matcha Ajijic, smoothies and frappes Ajijic, pastries Ajijic, pet-friendly cafe Ajijic, Lake Chapala coffee shop",
     menuTitle: "Café/ina Menu — drinks and pastries in Ajijic",
     menuDescription:
-      "Explore Café/ina's visual menu: matcha, specialty coffee, cold drinks and pastries inspired by the products currently visible in their materials.",
+      "Explore the Café/ina menu in Ajijic: specialty coffee, ceremonial matcha, smoothies, frappes, pastries and sandwiches. See our current offerings.",
+    menuKeywords:
+      "Café/ina menu, Ajijic coffee shop menu, specialty coffee Ajijic, ceremonial matcha Ajijic, iced latte, smoothies Ajijic, frappes Ajijic, pastries Ajijic, sandwiches Ajijic",
+    bakeryKeywords:
+      "Backhaus bakehouse, artisan bakery Ajijic, freshly baked bread Ajijic, croissants Ajijic, Mexican pastries Ajijic, Lake Chapala bakery",
   },
   nav: {
     bakery: "Our bakery",

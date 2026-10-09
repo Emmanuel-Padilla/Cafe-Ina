@@ -37,7 +37,7 @@ export function Footer() {
       Icon: FacebookIcon,
     },
     {
-      href: site.social.instagram,
+      href: site.social.tiktok,
       label: "TikTok Café/ina",
       Icon: TiktokIcon,
     },
@@ -71,7 +71,7 @@ export function Footer() {
               {t.footer.tagline}
             </p>
 
-            <div className="mt-6 flex items-center gap-3 sm:mt-7 sm:gap-4">
+            <div className="mt-6 flex flex-wrap items-center gap-4 sm:mt-7">
               {socialLinks.map(({ href, label, Icon }) => (
                 <a
                   key={label}
@@ -79,7 +79,7 @@ export function Footer() {
                   target="_blank"
                   rel="noreferrer noopener"
                   aria-label={label}
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-[1rem] border border-white/12 bg-white/[0.07] text-white/[0.88] transition-colors hover:bg-white/[0.12] sm:h-12 sm:w-12 sm:rounded-[1.1rem]"
+                  className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-[1rem] border border-white/12 bg-white/[0.07] text-white/[0.88] transition-colors hover:bg-white/[0.12] sm:h-12 sm:w-12 sm:rounded-[1.1rem]"
                 >
                   <Icon className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
                 </a>
