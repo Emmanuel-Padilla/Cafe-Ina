@@ -1,5 +1,6 @@
 export const site = {
   name: "Café/ina",
+  url: "https://cafe-ina.com.mx/",
   address: {
     street: "Calle Constitución #71",
     locality: "Ajijic",
@@ -16,6 +17,7 @@ export const site = {
   social: {
     instagram: "https://www.instagram.com/cafeina.coffe",
     facebook: "https://www.facebook.com/profile.php?id=61587115746046",
+    tiktok: "https://www.tiktok.com/@cafeina.ajijic",
   },
   phone: null as string | null,
   whatsapp: null as string | null,

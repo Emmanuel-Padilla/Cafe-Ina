@@ -2,10 +2,16 @@ const es = {
   meta: {
     title: "Café/ina — Café de especialidad en Ajijic, Jalisco",
     description:
-      "Café/ina: café de especialidad, matcha y repostería en Ajijic, Jalisco. Un espacio cálido y pet friendly para tu pausa favorita.",
+      "Café/ina en Ajijic, Jalisco: café de especialidad, matcha, smoothies, frappes y repostería. Visítanos en Constitución 71. Cafetería pet friendly.",
+    keywords:
+      "Café/ina Ajijic, Cafeina Ajijic, cafetería en Ajijic, café de especialidad Ajijic, matcha Ajijic, smoothies y frappes Ajijic, repostería Ajijic, cafetería pet friendly Ajijic, café Ribera de Chapala, coffee shop Ajijic",
     menuTitle: "Menú de Café/ina — bebidas y repostería en Ajijic",
     menuDescription:
-      "Explora el menú visual de Café/ina: matcha, café de especialidad, bebidas frías y repostería inspirada en los productos visibles actualmente.",
+      "Explora el menú de Café/ina en Ajijic: café de especialidad, matcha ceremonial, smoothies, frappes, repostería y sándwiches. Consulta la carta vigente.",
+    menuKeywords:
+      "menú Café/ina, menú cafetería Ajijic, café de especialidad Ajijic, matcha ceremonial Ajijic, latte frío, smoothies Ajijic, frappes Ajijic, repostería Ajijic, sándwiches Ajijic",
+    bakeryKeywords:
+      "Backhaus bakehouse, panadería artesanal Ajijic, pan recién horneado Ajijic, croissants Ajijic, pan dulce Ajijic, panadería Ribera de Chapala",
   },
   nav: {
     bakery: "Nuestra panadería",

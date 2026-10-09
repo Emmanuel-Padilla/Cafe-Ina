@@ -29,7 +29,7 @@ Las fotos se guardan localmente para evitar depender de URLs temporales de Faceb
 
 El navbar muestra el icono del croissant al lado de “Nuestra panadería”, al final de los enlaces, con el mismo tamaño de texto y espaciado que los demás elementos. El icono escala con la tipografía. Tanto el navbar como el pie y la presentación del inicio apuntan a `/panaderia`. Al definir `bakery.websiteUrl`, estos accesos pueden llevar al futuro dominio independiente.
 
-La paleta de Backhaus está limitada a `.bakery-theme`. El título, descripción, canonical y datos estructurados de la nueva ruta corresponden a la panadería; no se le atribuyen los horarios ni la dirección de Café/ina. El dominio de los metadatos sigue siendo el marcador existente y debe configurarse al publicar.
+La paleta de Backhaus está limitada a `.bakery-theme`. El título, descripción, canonical y datos estructurados de la nueva ruta corresponden a la panadería; no se le atribuyen los horarios ni la dirección de Café/ina. Los metadatos usan el dominio oficial `https://cafe-ina.com.mx/` y la ruta `/panaderia` está incluida en el sitemap.
 
 ## Más imágenes y video
 

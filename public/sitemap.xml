@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://cafeina-ajijic.example.com/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://cafeina-ajijic.example.com/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://cafeina-ajijic.example.com/" />
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://cafe-ina.com.mx/</loc>
   </url>
   <url>
-    <loc>https://cafeina-ajijic.example.com/panaderia</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://cafe-ina.com.mx/menu</loc>
+  </url>
+  <url>
+    <loc>https://cafe-ina.com.mx/panaderia</loc>
   </url>
 </urlset>
