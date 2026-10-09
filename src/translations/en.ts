@@ -169,16 +169,19 @@ const en: typeof es = {
         "Visit us"
     ],
     "productsEyebrow": "From our display",
+    "selectionTitle": "Meet our pastries",
+    "morePastriesTitle": "More from our bakery",
+    "assortmentTitle": "Pastry selection",
     "productsTitle": "Something for every craving.",
     "productsBody": "A glimpse of what we make at Backhaus. Ask the bakery about today’s selection and availability.",
     "products": [
         {
-            "title": "Croissants",
+            "title": "Medialunas",
             "description": "Golden layers and the flavor of butter. A classic for your coffee break."
         },
         {
-            "title": "Sweet rolls",
-            "description": "Sweet spirals finished with a creamy topping to brighten your day."
+            "title": "Cinnamon roll",
+            "description": "A glazed cinnamon roll topped with almonds or walnuts."
         },
         {
             "title": "Fruit pastries",
@@ -209,7 +212,7 @@ const en: typeof es = {
     "galleryTitle": "Trays, pastries, and good moments.",
     "galleryBody": "Explore our space and the making of our pastries. Tap a photo to see it larger.",
     "galleryCaptions": [
-        "Freshly baked croissants",
+        "Freshly baked medialunas",
         "Before the oven",
         "The finishing touches",
         "Finishing the croissants",
@@ -220,7 +223,7 @@ const en: typeof es = {
         "Sweet rolls and their topping"
     ],
     "galleryAlts": [
-        "Golden Backhaus croissants on a tray",
+        "Golden Backhaus medialunas on a tray",
         "Backhaus pastries being prepared on baking trays",
         "Finishing sweet pastries on a tray",
         "A hand brushing baked croissants",
@@ -248,7 +251,7 @@ const en: typeof es = {
     body: "Freshly baked every day, made with butter and the care of an artisan baker. Take something home or pair it with your next coffee break.",
     labels: ["Artisan bakery", "Baked daily", "Made with butter"],
     photoCaption: "From the oven to your next break.",
-    photoAlt: "Golden, freshly baked croissants from Backhaus bakehouse",
+    photoAlt: "Golden, freshly baked medialunas from Backhaus bakehouse",
     detailAlt: "Trays of assorted Backhaus pastries being prepared",
     logoAlt: "Backhaus bakehouse logo: a hand-drawn croissant on orange",
     visitLabel: "Visit Backhaus",

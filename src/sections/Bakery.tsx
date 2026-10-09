@@ -2,6 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Container } from "../components/Container";
 import { ButtonLink } from "../components/Button";
 import { BakeryIcon } from "../components/BakeryIcon";
+import { BakerySelection } from "../components/BakerySelection";
 import { useLanguage } from "../context/LanguageContext";
 import { bakery } from "../data/bakery";
 
@@ -23,6 +24,7 @@ export function Bakery() {
           </div>
           <img src={bakery.photos.croissants} alt={t.bakery.photoAlt} width={1320} height={1753} loading="lazy" decoding="async" className="h-64 w-full object-cover md:h-full md:max-h-[30rem]" />
         </div>
+        <BakerySelection />
       </Container>
     </section>
   );

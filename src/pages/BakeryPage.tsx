@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowUpRight, Clock3, Mail, MapPin, Play } from "lucide-reac
 import { Container } from "../components/Container";
 import { ButtonLink } from "../components/Button";
 import { BakeryIcon } from "../components/BakeryIcon";
+import { BakerySelection } from "../components/BakerySelection";
 import { Lightbox } from "../components/Lightbox";
 import { useLanguage } from "../context/LanguageContext";
 import { bakery, bakeryGallery } from "../data/bakery";
@@ -78,6 +79,7 @@ export function BakeryPage() {
               </article>
             ))}
           </div>
+          <BakerySelection />
         </Container>
       </section>
 
