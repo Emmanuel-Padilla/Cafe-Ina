@@ -47,20 +47,6 @@ export const menuCategories: MenuCategory[] = [
         confirmed: true,
         tags: ["hot", "cold", "signature"],
       },
-      {
-        id: "coconut-water-matcha",
-        nameKey: "coconut-water-matcha",
-        descriptionKey: "coconut-water-matcha",
-        confirmed: true,
-        tags: ["cold", "signature"],
-      },
-      {
-        id: "coco-pistache",
-        nameKey: "coco-pistache",
-        descriptionKey: "coco-pistache",
-        confirmed: true,
-        tags: ["cold", "signature"],
-      },
     ],
   },
   {
@@ -87,6 +73,7 @@ export const menuCategories: MenuCategory[] = [
         id: "smoothies-frappes",
         nameKey: "smoothies-frappes",
         descriptionKey: "smoothies-frappes",
+        image: clientPhoto("persona-con-bebidas-surtidas"),
         confirmed: true,
         tags: ["cold", "vegan"],
       },
